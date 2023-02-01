@@ -16,10 +16,11 @@ export default function Clientpage() {
     e.preventDefault()
 
     if (errorMsg) setErrorMsg('')
+   
 
     const body = {
-      email: "gereltod.s@gmail.com",
-      password_hash: "Asdf@123",
+      email: e.target.elements.username.value,
+      password_hash: e.target.elements.password.value,
     }
 
     try {

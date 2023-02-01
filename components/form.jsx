@@ -8,7 +8,7 @@ const Form = ({ isLogin, errorMessage, onSubmit }) => (
     </label>
     <label>
       <span>Password</span>
-      <input type="password" name="password" required />
+      <input type="text" name="password" required />
     </label>
     {!isLogin && (
       <label>
