@@ -2,7 +2,7 @@
 import { use } from "react"
 
 async function getCharacters() {
-	return await (await fetch("https://api.gtnjob.tk/api/reference", { cache: "no-store" })).json();
+	return await (await fetch("https://test-app-lkcqmqcklq-uc.a.run.app/api/reference", { cache: "no-store" })).json();
 }
 
 export default function Serverpage() {

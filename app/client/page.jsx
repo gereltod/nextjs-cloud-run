@@ -5,7 +5,7 @@ import useSWR from "swr"
 import Link from "next/link"
 import Form from '../../components/form'
 
-const fetcher = (path) => fetch(`https://api.gtnjob.tk/api/${path}`).then(res => res.json())
+const fetcher = (path) => fetch(`https://test-app-lkcqmqcklq-uc.a.run.app/api/${path}`).then(res => res.json())
 
 export default function Clientpage() {
 	const characters = useSWR("reference", fetcher)
@@ -25,11 +25,12 @@ export default function Clientpage() {
 
     try {
 			console.log(JSON.stringify(body))
-      const res = await fetch('https://api.gtnjob.tk/api/auth/login', {
+      const res = await fetch('https://test-app-lkcqmqcklq-uc.a.run.app/api/auth/login', {
+      // const res = await fetch('http://localhost:3001/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 				// host: 'localhost',
-				// mode: 'no-cors',
+				//mode: 'no-cors',
         body: JSON.stringify(body),
       })
       if (res.status === 200) {
